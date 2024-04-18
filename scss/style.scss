@@ -1,0 +1,52 @@
+// import google fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+// variables
+$c-primary: #00c0f2;
+$c-action: #3b50df;
+$c-text: #0a123d;
+$c-text-500: #80808f;
+
+// responsive screen
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+// mixing 
+@mixin screen ($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+// navbar style
+nav {
+  background-color: transparent;
+  .navbar-brand {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 35px;
+    color: $c-primary;
+    &:hover {
+      color: $c-primary;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+        font-weight: 400;
+        @include screen($xl) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+  }
+}
