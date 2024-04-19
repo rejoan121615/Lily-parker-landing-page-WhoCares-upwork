@@ -247,3 +247,59 @@ main {
         }
     }
 }
+
+
+// brand list 
+.brands-list { 
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-top: 1px solid $c-text-500;
+    border-bottom: 1px solid $c-text-500;
+    .brand-item {
+        a, img {
+            display: inline-block;
+        }
+        img {
+            width: 150px;
+        }
+    }
+}
+
+
+// why work with me 
+.why-work-with-me {
+    p, li {
+        font-weight: 500;
+    }
+
+    .our-benefit {
+        h5 {
+            text-transform: capitalize;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 0px;
+            li {
+                position: relative;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                &::after {
+                    content: '';
+                    background: transparent url('../images/icons/list-icon.png') center center;
+                    background-size: 100% 100%;
+                    width: 15px;
+                    height: 15px;
+                    display: block;
+                    position: absolute;
+                    left: -20px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+}

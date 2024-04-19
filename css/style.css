@@ -208,4 +208,48 @@ main .container p {
   color: #465ae1;
 }
 
+.brands-list {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-top: 1px solid #80808f;
+  border-bottom: 1px solid #80808f;
+}
+.brands-list .brand-item a, .brands-list .brand-item img {
+  display: inline-block;
+}
+.brands-list .brand-item img {
+  width: 150px;
+}
+
+.why-work-with-me p, .why-work-with-me li {
+  font-weight: 500;
+}
+.why-work-with-me .our-benefit h5 {
+  text-transform: capitalize;
+}
+.why-work-with-me .our-benefit ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+.why-work-with-me .our-benefit ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.why-work-with-me .our-benefit ul li:last-child {
+  margin-bottom: 0px;
+}
+.why-work-with-me .our-benefit ul li::after {
+  content: "";
+  background: transparent url("../images/icons/list-icon.png") center center;
+  background-size: 100% 100%;
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -134,8 +134,77 @@
       </div>
     </div>
   </section>
+
+  <!-- brand list  -->
+  <section>
+    <div class="container">
+      <ul class="brands-list mb-0 py-4">
+        <li class="brand-item"><a href=""><img src="./images/icons/airbnb.png" alt="Airbnb"></a></li>
+        <li class="brand-item"><a href=""><img src="./images/icons/hubspot.png" alt="Hubspot"></a></li>
+        <li class="brand-item"><a href=""><img src="./images/icons/google.webp" alt="Google"></a></li>
+        <li class="brand-item"><a href=""><img src="./images/icons/spotify.png" alt="Spotify"></a></li>
+        <li class="brand-item"><a href=""><img src="./images/icons/fedex.png" alt="fedex"></a></li>
+        <li class="brand-item"><a href=""><img src="./images/icons/microsoft.png" alt="microsoft"></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- why work with me  -->
+  <section class=" why-work-with-me">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-xl-6">
+          <img class=" w-100" src="./images/about-us-img.png" alt="">
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class=" ps-5 ">
+            <p class="section-marker text-start">about us</p>
+            <h1 class="section-title text-start mb-3">who we are</h1>
+          <p class=" text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A facere similique tenetur ex error itaque ducimus perferendis! Quae hic quibusdam aliquid quia ratione odio, ipsa architecto eligendi voluptas unde. Voluptas!</p>
+          <div class=" mt-4 mb-5 our-benefit">
+            <h5 class=" mb-3">our benefit:</h5>
+            <ul>
+              <li>The speed you need at a price you love</li>
+              <li>The bandwith to power multiple device at once</li>
+              <li>Seamless streaming, working and gaming</li>
+            </ul>
+          </div>
+          <a href="" class="btn">contact us</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
   <!-- js link  -->
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- marquree  -->
+  <script>
+    function Marquee(selector, speed) {
+  const parentSelector = document.querySelector(selector);
+  const clone = parentSelector.innerHTML;
+  const firstElement = parentSelector.children[0];
+  let i = 0;
+  console.log(firstElement);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+
+  setInterval(function () {
+    firstElement.style.marginLeft = `-${i}px`;
+    if (i > firstElement.clientWidth) {
+      i = 0;
+    }
+    i = i + speed;
+  }, 0);
+}
+
+//after window is completed load
+//1 class selector for marquee
+//2 marquee speed 0.2
+window.addEventListener('load', Marquee('.marquee', 0.2))
+
+  </script>
 </body>
 
 </html>
