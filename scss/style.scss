@@ -27,6 +27,64 @@ $xxl: 1400px;
     }
 }
 
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn, .btn-outline {
+    background-color: $c-action;
+    border-radius: 0px;
+    color: white;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    height: 58px;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+        background-color: $c-action;
+        color: white;
+    }
+}
+
+.btn-outline {
+    background-color: white;
+    color: $c-primary;
+}
+
+.section-title-wrap {
+    padding-bottom: 40px;
+    @include screen($xl) {
+        padding-bottom: 60px;
+    }
+}
+
+.section-title {
+    font-size: 35px;
+    @include screen($xl) {
+        font-size: 40px;
+    }
+    color: $c-text;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.section-marker {
+    font-size: 1rem;
+    color: $c-primary;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+main, section {
+    margin-bottom: 100px;
+}
+
 // navbar style
 nav {
   background-color: transparent;
@@ -49,4 +107,143 @@ nav {
         }
     }
   }
+}
+
+
+// main style 
+main {
+    .container {
+        background-color: #f0f9ff;
+        border-radius: 5px;
+        @include screen($xl) {
+            border-radius: 15px;
+        }
+
+        .description {
+            margin-top: 80px;
+            // padding-top: 80px!important;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 50px;
+            @include screen($xl) {
+                margin-top: 0px;
+            }
+            @include screen($xl) {
+                padding-left: 80px!important;
+                padding-bottom: 0px;
+            }
+        }
+        
+        .key-point {
+            list-style: none;
+            text-transform: uppercase;
+            color: $c-primary;
+            font-weight: 500;
+            overflow: hidden;
+            margin-left: -10px;
+            li {
+                float: left;
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+                padding-right: 10px;
+                padding-left: 10px;
+                border-right: 2px solid $c-primary;
+                &:last-child {
+                    border-radius: 0px;
+                }
+            }
+        }
+
+        h1 {
+            text-align: left;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: $c-text;
+            font-size: 40px;
+            @include screen($xl) {
+                font-size: 50px;
+            }
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+// service section --------------
+
+.service-list {
+ 
+    .service-item {
+        border: 1px solid #e0e9f4;
+        border-radius: 5px;
+        padding: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        column-gap: 25px;
+        @include screen($xl) {
+            padding: 45px;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            @extend %center;
+            margin-bottom: 20px;
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .info {
+            flex: 1;
+            h3 {
+                font-weight: 600;
+            }
+            a {
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: capitalize;
+                color: $c-text;
+                i {
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+    }
+
+    .col-12 {
+        &:nth-child(1) {
+            .icon {
+                background-color: #fff9e9;
+                color: #fdb30a;
+            }
+        }
+        &:nth-child(2) {
+            .icon {
+                background-color: #21b5f5;
+                color: white;
+            }
+        }
+        &:nth-child(3) {
+            .icon {
+                background-color: #fff1ed;
+                color: #fe6633;
+            }
+        }
+        &:nth-child(4) {
+            .icon {
+                background-color: #eef0fd;
+                color: #465ae1;
+            }
+        }
+    }
 }
