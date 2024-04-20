@@ -75,7 +75,11 @@
 
 main,
 section {
-  margin-bottom: 100px;
+  padding-top: 100px;
+}
+
+footer {
+  margin-top: 100px;
 }
 
 nav {
@@ -99,7 +103,21 @@ nav .navbar-nav .nav-item {
     padding-right: 20px;
   }
 }
+nav .navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+nav .navbar-nav .nav-item .nav-link.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  border: 1px solid #000021;
+  left: 0;
+  bottom: 0px;
+}
 
+main {
+  padding-top: 100px;
+}
 main .container {
   background-color: #f0f9ff;
 }

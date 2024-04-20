@@ -91,7 +91,11 @@ $xxl: 1400px;
 
 main,
 section {
-  margin-bottom: 100px;
+  padding-top: 100px;
+}
+
+footer {
+    margin-top: 100px;
 }
 
 // navbar style
@@ -114,13 +118,27 @@ nav {
         padding-left: 20px;
         padding-right: 20px;
       }
+
+      .nav-link {
+        position: relative;
+        &.active::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            border: 1px solid #000021;
+            left: 0;
+            bottom: 0px;
+          }
+      }
     }
   }
 }
 
 // main style
 main {
+    padding-top: 100px;
   .container {
+
     background-color: #f0f9ff;
     @extend %section-radius;
     .description {
