@@ -19,7 +19,8 @@
   }
 }
 
-.btn, .btn-outline {
+.btn,
+.btn-outline {
   background-color: #3b50df;
   border-radius: 0px;
   color: white;
@@ -29,7 +30,8 @@
   display: inline-block;
   text-decoration: none;
 }
-.btn:hover, .btn-outline:hover {
+.btn:hover,
+.btn-outline:hover {
   background-color: #3b50df;
   color: white;
 }
@@ -71,7 +73,8 @@
   margin-bottom: 10px;
 }
 
-main, section {
+main,
+section {
   margin-bottom: 100px;
 }
 
@@ -124,6 +127,7 @@ main .container .key-point {
   font-weight: 500;
   overflow: hidden;
   margin-left: -10px;
+  margin-bottom: 40px;
 }
 main .container .key-point li {
   float: left;
@@ -134,7 +138,7 @@ main .container .key-point li {
   border-right: 2px solid #00c0f2;
 }
 main .container .key-point li:last-child {
-  border-radius: 0px;
+  border: 0px;
 }
 main .container h1 {
   text-align: left;
@@ -213,37 +217,76 @@ main .container p {
 
 .brands-list {
   list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  border-top: 1px solid #80808f;
-  border-bottom: 1px solid #80808f;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  position: relative;
 }
-.brands-list .brand-item a, .brands-list .brand-item img {
+@media only screen and (min-width: 768px) {
+  .brands-list {
+    row-gap: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .brands-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.brands-list::after, .brands-list::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  background: hsl(0, 0%, 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #e0e9f4 50%, #ffffff 100%);
+}
+.brands-list::before {
+  top: 0;
+}
+.brands-list::after {
+  bottom: 0;
+}
+.brands-list .brand-item {
+  text-align: center;
+}
+.brands-list .brand-item a,
+.brands-list .brand-item img {
   display: inline-block;
 }
 .brands-list .brand-item img {
-  width: 150px;
+  width: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .brands-list .brand-item img {
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .brands-list .brand-item img {
+    width: 100px;
+  }
 }
 
-.about-us p, .about-us li {
+#about-us p,
+#about-us li {
   font-weight: 500;
 }
-.about-us .our-benefit h5 {
+#about-us .our-benefit h5 {
   text-transform: capitalize;
 }
-.about-us .our-benefit ul {
+#about-us .our-benefit ul {
   list-style: none;
   margin-bottom: 0px;
 }
-.about-us .our-benefit ul li {
+#about-us .our-benefit ul li {
   position: relative;
   margin-bottom: 10px;
 }
-.about-us .our-benefit ul li:last-child {
+#about-us .our-benefit ul li:last-child {
   margin-bottom: 0px;
 }
-.about-us .our-benefit ul li::after {
+#about-us .our-benefit ul li::after {
   content: "";
   background: transparent url("../images/icons/list-icon.png") center center;
   background-size: 100% 100%;
@@ -253,6 +296,9 @@ main .container p {
   position: absolute;
   left: -20px;
   top: 5px;
+}
+#about-us .section-info {
+  line-height: 200%;
 }
 
 #powerfully-features .container {
@@ -306,31 +352,54 @@ main .container p {
 #customer-review .customer-reviews {
   margin-top: 80px;
 }
-#customer-review .card {
-  padding: 20px;
+#customer-review .review-item .row .col-3 {
+  max-width: 75px;
 }
-#customer-review .name {
+#customer-review .review-item .card {
+  padding: 20px;
+  height: 100%;
+  text-decoration: none;
+}
+#customer-review .review-item .name {
   color: #0a123d;
   font-weight: 600;
   margin-bottom: 0px;
 }
-#customer-review .star-list span i {
+#customer-review .review-item .star-list span i {
   color: #fdb308;
 }
-#customer-review .review-text {
+#customer-review .review-item .review-text {
   margin-top: 20px;
 }
-#customer-review .review-text p {
+#customer-review .review-item .review-text p {
   color: #0a123d;
   font-weight: 400;
 }
-#customer-review .review-footer img {
+#customer-review .review-item .review-footer img {
   width: 60px;
   margin-right: 15px;
 }
-#customer-review .review-footer .date {
+#customer-review .review-item .review-footer .date {
   color: #b9b9b9;
   font-size: 0.8rem;
+}
+#customer-review .ai-directory .review-footer img {
+  width: 125px !important;
+}
+#customer-review .apple .review-footer img {
+  width: 80px !important;
+}
+#customer-review .google .review-footer img {
+  width: 80px !important;
+}
+
+footer {
+  background-color: #0a123d;
+}
+footer p {
+  color: white;
+  font-weight: 500;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
